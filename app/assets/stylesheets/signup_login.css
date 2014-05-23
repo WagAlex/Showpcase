@@ -1,0 +1,16 @@
+.align_first_last {
+
+}
+
+.cadre {
+  top: 18%;
+  left: 10%;
+  position: absolute;
+  z-index: 3;
+  color: white;
+  width: 40%;
+  background-color: rgba(0,0,0,0.7);
+  padding: 10px 10px 20px 20px;
+  border-radius: 5px;
+
+}
