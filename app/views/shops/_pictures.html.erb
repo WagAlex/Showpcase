@@ -1,0 +1,8 @@
+<div class="row">
+<% @shop.pictures.each do |picture| %>
+  <fieldset class= "picture_edit col-xs-4">
+    <%= image_tag picture.file.url(:thumb) %>
+    <%= link_to "Delete", picture_path(picture), class: 'delete-picture', method: :delete, remote: true %>
+  </fieldset>
+<% end %>
+</div>

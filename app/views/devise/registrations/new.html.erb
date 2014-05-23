@@ -1,0 +1,28 @@
+<div id="description">
+<h2>Sign up</h2><br>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div class="form-group"><%= f.label :first_name, 'First name' %><br />
+  <%= f.text_field :first_name, class: "form-control", autofocus: true, :placeholder => 'First Name'  %></div>
+
+    <div class="form-group"><%= f.label :last_name, 'Last name' %><br />
+  <%= f.text_field :last_name, class: "form-control", autofocus: true, :placeholder => 'Last Name'  %></div>
+
+  <div class="form-group"><%= f.label :email %><br />
+  <%= f.email_field :email, class: "form-control", autofocus: true, :placeholder => 'Your Email'  %></div>
+
+  <div class="form-group"><%= f.label :password %><br />
+
+    <%= f.password_field :password, class: "form-control", autocomplete: "off", :placeholder => 'Password (min 6 characters)' %></div><br>
+
+
+  <div><%= f.submit "Sign up", class: "btn btn-success"%></div><br><br>
+  <div> By signing up you agree to the <%= link_to 'Terms and Conditions' %></div>
+
+
+<% end %>
+
+<%= render "devise/shared/links" %>
+</div>

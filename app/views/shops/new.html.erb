@@ -1,0 +1,45 @@
+<h1>List your shop</h1>
+<%= form_for(@shop) do |f|  %>
+
+  <%= f.hidden_field :user_id, value: current_user.id %>
+
+  <div class= "form-description col-xs-12 col-sm-4 col-md-3">
+    <div class="form-group">
+      <%= f.label :name %><br>
+      <%= f.text_field :name, class: "form-control", placeholder: "Name"%>
+    </div>
+    <div class="form-group">
+      <%= f.label :description %><br>
+      <%= f.text_area :description, class: "form-control", placeholder: "Please describe the shop here" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :price %> ($/month)<br>
+      <%= f.number_field :price, class: "form-control", placeholder: "ex: 1499" %>
+    </div>
+  </div>
+  <div class= "form-address col-xs-12 col-sm-4 col-md-3">
+    <div class="form-group">
+      <%= f.label :street_address %><br>
+      <%= f.text_field :street_address, class: "form-control", placeholder: "ex: 1 rue de l'hotel de ville" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :zipcode %><br>
+      <%= f.text_field :zipcode, class: "form-control", placeholder: "ex: 75017" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :city %><br>
+      <%= f.text_field :city, class: "form-control", placeholder: "ex: Paris" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :country %><br>
+      <%= f.text_field :country, class: "form-control", placeholder: "ex: France" %>
+    </div>
+  </div>
+  <div class="form-group col-xs-12 col-sm-4 col-md-3 " >
+    <div class="form-group">
+      <%= f.submit "List your space", class: "btn btn-success"%>
+    </div>
+    <%= link_to 'Back', shops_path, class: "btn btn-primary" %>
+  </div>
+
+<% end %>

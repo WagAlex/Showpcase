@@ -1,0 +1,45 @@
+  <!--  #######################     CAROUSEL   ########################   -->
+
+
+<div id="home-carousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#home-carousel" data-slide-to="0" class="active"></li>
+    <li data-target="#home-carousel" data-slide-to="1"></li>
+    <li data-target="#home-carousel" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div id="description">
+      <h1>Set up Shop</h1>
+      <h4>Find and rent pop-up retail spaces in your city.</h4>
+      <%= link_to "Browse our shops", shops_path, class: "btn btn-success btn-lg col-xs-offset-6", id: "call-to-action" %>
+    </div>
+    <div class="item active">
+      <img src="http://cdn.cstatic.net/images/gridfs/4fd71f3785216d677b005f85/IMG_6917.JPG" alt="store">
+      <div class="carousel-caption">
+        <p>One of many cool shops</p>
+      </div>
+    </div>
+    <div class="item">
+      <img src="http://bestdesignprojects.com/wp-content/uploads/2013/10/moma20design20store20soho20interior1.jpg" alt="store">
+      <div class="carousel-caption">
+       <p>One of many cool shops</p>
+      </div>
+    </div>
+
+  </div>
+
+ <!-- Controls -->
+  <a class="left carousel-control" href="#home-carousel" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+  <a class="right carousel-control" href="#home-carousel" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+</div>
+
+
+
+<!-- ##################################################################### -->

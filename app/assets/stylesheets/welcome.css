@@ -1,0 +1,37 @@
+re.item img{
+  width: 100%;
+  max-height: 100%;
+}
+
+#home-carousel {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top:50px;
+
+}
+
+#call-to-action{
+margin-top: 20px;
+}
+
+.welcome-prompt {
+
+}
+
+.carosel-inner {
+  height: 100%;
+}
+
+#description {
+  top: 10%;
+  left: 10%;
+  position: absolute;
+  z-index: 3;
+  color: white;
+  width: 40%;
+  background-color: rgba(0,0,0,0.7);
+  padding: 10px 10px 20px 20px;
+  border-radius: 5px;
+
+}

@@ -1,0 +1,54 @@
+<%= render 'bookings/form_modal', booking: @booking %>
+
+<h1 class= "col-xs-12">Booking's details</h1>
+
+<% shop = @booking.shop %>
+
+<h2 class= "col-xs-12">
+  <%= shop.name %>, <%= number_to_currency(@booking.price, precision: 0) %></h2><br>
+
+<p class= "col-xs-12">Check In: <%= @booking.start_date %><br>
+Check Out: <%= @booking.end_date %><br>
+Days: <%= (@booking.end_date - @booking.start_date).to_i + 1%></p>
+
+
+<h4 class= "col-xs-12">
+  <%= shop.street_address %>, <%= shop.city %> <%= shop.zipcode %>, <%= shop.country %>
+</h4><br><br>
+
+<p class= "col-xs-12 col-sm-6 col-xs-12 col-md-3">
+  Host: <br>
+  <%= shop.user.first_name %> <%= shop.user.last_name %> <br>
+  <%= shop.user.email %>
+</p>
+
+<p class= "col-xs-12 col-sm-6 col-md-3">
+  Guest: <br>
+  <%= @booking.user.first_name %> <%= @booking.user.last_name %> <br>
+  <%= @booking.user.email %>
+</p>
+<div class= "pictures col-xs-12">
+  <% shop.pictures.each do |picture| %>
+    <%= image_tag picture.file.url(:large), alt: shop.name %>
+  <% end %>
+</div>
+
+<p class= "col-xs-6">
+  <strong>Description:</strong><br>
+  <%= shop.description %>
+</p><br>
+
+<div class= "pictures col-xs-12">
+  <% shop.pictures.each do |picture| %>
+    <%= image_tag picture.file.url(:large), alt: shop.name %>
+  <% end %>
+</div>
+
+<div class="buttons col-xs-12">
+  <%= link_to 'Back', bookings_path, class: "btn btn-primary" %>
+</div>
+<div class="buttons col-xs-12">
+  <% if policy(@booking).destroy? %>
+    <%= link_to 'Cancel reservation', @booking, class: "btn btn-danger" ,method: :delete, data: { confirm: 'Are you sure?' } %>
+  <% end %>
+</div>
