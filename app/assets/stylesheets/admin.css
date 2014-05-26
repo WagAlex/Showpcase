@@ -1,8 +1,10 @@
 /*
 
- *= require_tree ./application
+ *=
+ *= require_tree ./admin
 
  */
+
 
 .form-control {
   max-width: 304px;
@@ -22,3 +24,5 @@
   border: 1px solid #ccc;
   border-radius: 4px;
 }
+
+@import 'shops';

@@ -5,6 +5,13 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+# Create default admin user
+AdminUser.create!(email: 'alexandre@tournaud.com', password: 'showpcaselewagon', password_confirmation: 'showpcaselewagon')
+
+
+
+
 require 'faker'
 
 30.times do
