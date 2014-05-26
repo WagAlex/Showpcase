@@ -13,4 +13,4 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.remotipart
-//= require_tree ./admin
+//= require_tree ./admin/
