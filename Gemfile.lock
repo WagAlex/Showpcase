@@ -108,6 +108,7 @@ GEM
       execjs
     coffee-script-source (1.7.0)
     columnize (0.8.9)
+    country-select (1.1.1)
     daemons (1.1.9)
     debug_inspector (0.0.2)
     debugger (1.6.7)
@@ -250,6 +251,7 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   coffee-rails (~> 4.0.0)
+  country-select
   devise
   faker
   figaro (= 1.0.0.rc1)
