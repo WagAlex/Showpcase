@@ -5,7 +5,10 @@ class User < ActiveRecord::Base
   has_many :bookings
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+
   after_create :send_welcome_email
+
+  validates :first_name, :last_name, presence: true
 
   def send_welcome_email
     UserMailer.welcome_email(self).deliver
