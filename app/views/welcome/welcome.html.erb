@@ -14,10 +14,10 @@
     <div id="description">
       <h1>Set up Shop</h1>
 
-      <%= form_tag locations_path, method => :get do %>
+      <!-- form_tag locations_path, method => :get do -->
         <p>
           <%= text_field_tag :search, params[:search], :placeholder => 'e.g. Paris, Lyon, Lille...' %>
-          <%= submit_tag 'Search Near', :name => nil %>
+          <%= submit_tag 'Search', :name => nil %>
         </p>
 
       <h4>Find and rent pop-up retail spaces in your city.</h4>
