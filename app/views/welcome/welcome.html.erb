@@ -13,6 +13,13 @@
   <div class="carousel-inner">
     <div id="description">
       <h1>Set up Shop</h1>
+
+      <%= form_tag locations_path, method => :get do %>
+        <p>
+          <%= text_field_tag :search, params[:search], :placeholder => 'e.g. Paris, Lyon, Lille...' %>
+          <%= submit_tag 'Search Near', :name => nil %>
+        </p>
+
       <h4>Find and rent pop-up retail spaces in your city.</h4>
       <%= link_to "Browse our shops", shops_path, class: "btn btn-success btn-lg col-xs-offset-6", id: "call-to-action" %>
     </div>

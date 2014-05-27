@@ -6,5 +6,5 @@ class Shop < ActiveRecord::Base
   scope :uncreated, where(:created_at => nil)
 
   geocoded_by :address
-  after_validation :geocode
+  after_validation :geocode, :if => :address_changed?
 end
