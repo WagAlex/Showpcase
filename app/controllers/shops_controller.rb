@@ -5,6 +5,17 @@ class ShopsController < ApplicationController
 
   def index
     @shops = Shop.all
+
+    @hash = Gmaps4rails.build_markers(@shops) do |shop, marker|
+      marker.lat shop.latitude
+      marker.lng shop.longitude
+      marker.json({ title: shop.name })
+#     marker.picture({
+#             "url" => ,
+#             "width" =>  32,
+#             "height" => 32})
+      marker.infowindow render_to_string(:partial => "/shops/map_box", locals: {shop: shop})
+    end
   end
 
   def user_index

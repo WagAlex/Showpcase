@@ -5,7 +5,7 @@
       <% if shop.pictures.size > 0 %>
         <%= image_tag shop.pictures.first.file.url(:medium), class: "shop_picture", alt: shop.name %>
       <% else %>
-        <%= image_tag("http://upload.wikimedia.org/wikipedia/commons/8/8e/Shop.svg", class: "shop_picture missing_picture", alt: shop.name) %>
+        <%= image_tag("http://1.bp.blogspot.com/-wpikixbnS64/Tgxd7mpRc4I/AAAAAAAABAk/XLRqNnyuS90/s1600/louis-vuitton-comme-des-garcons-pop-up-store-2.jpg", class: "shop_picture missing_picture", alt: shop.name) %>
       <% end %>
     </div>
     <div class= "shop_info">
@@ -14,10 +14,12 @@
         <p><%= shop.street_address %></p>
         <p><%= shop.city %></p>
         <p><%= shop.country %></p>
+
       </div>
       <div class="shop_price col-xs-4">
         <h3><%= number_to_currency(shop.price, precision: 0) %></h3>
       </div>
     </div>
   </div></a>
+
 <% end %>
