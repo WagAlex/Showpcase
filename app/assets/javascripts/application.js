@@ -14,3 +14,5 @@
 //= require jquery_ujs
 //= require jquery.remotipart
 //= require_tree ./application/
+//= require underscore
+//= require gmaps/google
