@@ -12,16 +12,17 @@
   <!-- Wrapper for slides -->
   <div class="carousel-inner">
     <div id="description">
-      <h1>Set up Shop</h1>
+      <h1>Set up Shop</h1><br>
 
       <!-- form_tag locations_path, method => :get do -->
         <p>
           <%= text_field_tag :search, params[:search], :placeholder => 'e.g. Paris, Lyon, Lille...' %>
           <%= submit_tag 'Search', :name => nil %>
         </p>
+      <!-- end -->
 
-      <h4>Find and rent pop-up retail spaces in your city.</h4>
-      <%= link_to "Browse our shops", shops_path, class: "btn btn-success btn-lg col-xs-offset-6", id: "call-to-action" %>
+      <h6>Find and rent pop-up retail spaces in your city.</h6>
+      <!-- link_to "Browse our shops", shops_path, class: "btn btn-success btn-lg col-xs-offset-6", id: "call-to-action" -->
     </div>
     <div class="item active">
       <img src="http://cdn.cstatic.net/images/gridfs/4fd71f3785216d677b005f85/IMG_6917.JPG" alt="store">
@@ -36,7 +37,15 @@
       </div>
     </div>
 
+  </div><br>
+
+  <footer>
+  <div class='like-fb'>
+    <iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fshowpcase&amp;width&amp;layout=standard&amp;action=like&amp;show_faces=true&amp;share=true&amp;height=80" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:80px;" allowTransparency="true">
+    </iframe>
   </div>
+
+</footer>
 
  <!-- Controls -->
   <a class="left carousel-control" href="#home-carousel" data-slide="prev">
@@ -49,4 +58,10 @@
 
 
 
-<!-- ##################################################################### -->
+
+
+
+
+
+
+<!-- rails g AddColumnsToShop latitude:float longitude:float ##################################################################### -->
