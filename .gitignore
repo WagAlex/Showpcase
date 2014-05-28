@@ -1,4 +1,4 @@
 config/application.yml
 log/development.log
 public/assets
-tmp/cache/assets
+tmp
