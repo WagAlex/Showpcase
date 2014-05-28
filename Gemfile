@@ -10,7 +10,10 @@ gem 'rails', '4.1.1'
 # Use postgresql as the database for Active Record
 gem 'pg'
 
+# Devise with fb-omniauth extension
 gem "devise"
+gem 'omniauth-facebook'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -40,15 +43,12 @@ gem 'paperclip', github: 'thoughtbot/paperclip'
 
 gem 'aws-sdk'
 
+# For handling API keys
 gem 'figaro', '1.0.0.rc1'
 
 gem 'pry'
 
 gem 'pry-debugger'
-
-gem "better_errors"
-
-gem "binding_of_caller"
 
 gem 'remotipart', '~> 1.2'
 
@@ -62,6 +62,19 @@ gem 'ransack', github: 'activerecord-hackery/ransack'
 gem 'formtastic', github: 'justinfrench/formtastic'
 
 gem 'country-select'
+
+# Debug gems
+group :development do
+  gem "quiet_assets"
+  gem "better_errors"
+  gem "binding_of_caller"
+end
+
+# For extended use of fb API (getting user's friends infos, posting on his wall..)
+gem 'koala'
+
+
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

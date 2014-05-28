@@ -3,6 +3,8 @@ re.item img{
   max-height: 100%;
 }
 
+
+
 #home-carousel {
   position: absolute;
   left: 0;
@@ -25,7 +27,7 @@ margin-top: 20px;
 
 #description {
   top: 15%;
-  left: 15%;
+  left: 30%;
   position: absolute;
   z-index: 3;
   color: white;
@@ -34,4 +36,13 @@ margin-top: 20px;
   padding: 10px 10px 20px 20px;
   border-radius: 5px;
 
+}
+
+.search-locbar {
+  color: black;
+  width: 30%;
+}
+
+.like-fb {
+  margin-left: 71%;
 }
