@@ -6,8 +6,16 @@
 }
 
 .shop {
-  height: 460px;
-  margin-top: 20px;
+  height: 500px;
+  margin-top: 0%;
+  margin-bottom: 0%;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+
+.shops-column {
+  height: 500px;
+  overflow: scroll;
 }
 
 .shop_info h3{
@@ -57,5 +65,5 @@
 }
 
 .map_box {
-  padding: 10px;
+  padding: 0px;
 }
