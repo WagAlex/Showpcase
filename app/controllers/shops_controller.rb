@@ -5,6 +5,11 @@ class ShopsController < ApplicationController
 
   def index
     @shops = Shop.all
+    if params[:search].present?
+      @shops = Shop.near(params[:search], 1)
+    else
+      @shops = Shop.all
+    end
 
     @hash = Gmaps4rails.build_markers(@shops) do |shop, marker|
       marker.lat shop.latitude

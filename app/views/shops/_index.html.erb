@@ -10,7 +10,7 @@
         <div class= "shop_info">
           <h5><%= shop.name %></h5>
           <div class= "col-sm-6 col-md-6">
-            <p><%= shop.street_address %> <%= shop.city %> <%= shop.country %></p>
+            <p><%= shop.street_address %> <%= shop.zipcode %> <%= shop.city %> <%= shop.country %></p>
           </div>
           <div class="shop_price col-xs-2">
             <h3><%= number_to_currency(shop.price, precision: 0) %></h3>
