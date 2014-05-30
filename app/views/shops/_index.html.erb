@@ -1,24 +1,22 @@
-<% @shops.each do |shop| %>
-  <a href= <%= 'shops/' + shop.id.to_s%>>
-    <div class="shop_picture_framework col-xs-3">
-      <% if shop.pictures.size > 0 %>
-        <%= image_tag shop.pictures.first.file.url(:medium), class: "shop_picture", alt: shop.name %>
-      <% else %>
-        <%= image_tag("http://1.bp.blogspot.com/-wpikixbnS64/Tgxd7mpRc4I/AAAAAAAABAk/XLRqNnyuS90/s1600/louis-vuitton-comme-des-garcons-pop-up-store-2.jpg", class: "shop_picture missing_picture", alt: shop.name) %>
-      <% end %>
+<div class='row'>
+  <% @shops.each do |shop| %>
+    <div class='col-sm-6 col-md-6'>
+      <a href= <%= 'shops/' + shop.id.to_s%>>
+        <% if shop.pictures.size > 0 %>
+          <%= image_tag shop.pictures.first.file.url(:medium), class: "shop_picture", alt: shop.name %>
+        <% else %>
+          <%= image_tag("http://1.bp.blogspot.com/-wpikixbnS64/Tgxd7mpRc4I/AAAAAAAABAk/XLRqNnyuS90/s1600/louis-vuitton-comme-des-garcons-pop-up-store-2.jpg", class: "shop_picture missing_picture", alt: shop.name) %>
+        <% end %>
+        <div class= "shop_info">
+          <h5><%= shop.name %></h5>
+          <div class= "col-sm-6 col-md-6">
+            <p><%= shop.street_address %> <%= shop.city %> <%= shop.country %></p>
+          </div>
+          <div class="shop_price col-xs-2">
+            <h3><%= number_to_currency(shop.price, precision: 0) %></h3>
+          </div>
+        </div>
+      </a>
     </div>
-    <div class= "shop_info">
-      <h5 class= "row"><%= shop.name %></h5>
-      <div class= "col-xs-2">
-        <p><%= shop.street_address %></p>
-        <p><%= shop.city %></p>
-        <p><%= shop.country %></p>
-
-      </div>
-      <div class="shop_price col-xs-2">
-        <h3><%= number_to_currency(shop.price, precision: 0) %></h3>
-      </div>
-    </div>
-  </a>
-
-<% end %>
+  <% end %>
+</div>
