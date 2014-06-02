@@ -73,6 +73,7 @@ end
 # For extended use of fb API (getting user's friends infos, posting on his wall..)
 gem 'koala'
 
+gem 'mailboxer'
 
 
 
