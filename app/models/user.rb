@@ -11,7 +11,7 @@ class User < ActiveRecord::Base
 
   validates :first_name, :last_name, presence: true
 
-  # acts_as_messageable  k,   m ,,,,,,,
+  acts_as_messageable
 
   def send_welcome_email
     UserMailer.welcome_email(self).deliver
