@@ -1,6 +1,7 @@
 class Shop < ActiveRecord::Base
   has_many :pictures
   has_many :bookings
+  has_many :comments
   belongs_to :user
 
   scope :uncreated, where(:created_at => nil)

@@ -3,12 +3,15 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   has_many :shops
   has_many :bookings
+  has_many :comments
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable, :omniauth_providers => [:facebook]
 
   after_create :send_welcome_email
 
   validates :first_name, :last_name, presence: true
+
+  # acts_as_messageable  k,   m ,,,,,,,
 
   def send_welcome_email
     UserMailer.welcome_email(self).deliver
