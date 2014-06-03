@@ -19,9 +19,21 @@
   <%= @shop.user.email %>
 </p>
 
+
+
 <div class= "pictures col-xs-12">
   <% @shop.pictures.each do |picture| %>
     <%= image_tag picture.file.url(:large), alt: @shop.name %>
+  <% end %>
+</div>
+
+<div class='col-xs-12'>
+  <h3> Reviews: <%= @shop.comments.count %> </h3>
+   <% for comment in @shop.comments do %>
+    <ol>
+      <%= comment.user.first_name %>: <%= comment.body %><br>
+        <em>(<%= comment.created_at.strftime('%B %d, %Y') %>)</em>
+    </ol>
   <% end %>
 </div>
 
@@ -38,9 +50,6 @@
 </div>
 
 
-<% for comment in @shop.comments do %>
-  <%= comment.body %>
-  <% end %>
 
 
 
