@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 
   get 'shops/user_index'
 
-  resources :shops devise_for
+  resources :shops do
     resources :comments
   end
 
