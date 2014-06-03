@@ -50,7 +50,9 @@
 </div>
 
 
-
+<% for comment in @shop.comments do %>
+  <%= comment.body %>
+  <% end %>
 
 
 
