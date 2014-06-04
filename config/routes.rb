@@ -10,11 +10,13 @@ Rails.application.routes.draw do
 
   get 'shops/user_index'
 
-  resources :shops do
+  resources :shops
 
 
   resources :bookings
 
+  resources :messages
+  resources :conversations
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
