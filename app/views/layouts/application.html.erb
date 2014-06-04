@@ -33,24 +33,31 @@
 
 
         <ul class="nav navbar-nav navbar-right">
-          <li><%= link_to "List your shop", new_shop_path %></li>
-          <li><%= link_to "Find a shop", shops_path %></li>
-
           <% if user_signed_in? %>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= current_user.first_name %> <b class="caret"></b></a>
-            <ul class="dropdown-menu">
-              <li><%= link_to "My Shops", shops_user_index_path %></li>
-              <li><%= link_to "My Rentals", bookings_path %></li>
-              <li class="divider"></li>
-              <li><%= link_to "My Account", edit_user_registration_path %></li>
-              <li><%= link_to "Sign out", destroy_user_session_path, method: :delete %></li>
-            </ul>
-          </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= current_user.first_name %> <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><%= link_to "My Shops", shops_user_index_path %></li>
+                <li><%= link_to "My Rentals", bookings_path %></li>
+                <li class="divider"></li>
+                <li><%= link_to "My Account", edit_user_registration_path %></li>
+                <li><%= link_to "Sign out", destroy_user_session_path, method: :delete %></li>
+              </ul>
+            </li>
+            <li>
+              <a href="/messages"><i class="fa fa-envelope"></i><i class="alert-count position-super fade">0</i></a>
+            </li>
+
           <% else %>
+
           <li><%= link_to "Sign up", new_user_registration_path %></li>
           <li><%= link_to "Log in", new_user_session_path %></li>
           <% end %>
+
+          <li><%= link_to "List your shop", new_shop_path %></li>
+          <li><%= link_to "Find a shop", shops_path %></li>
+
+
         </ul>
           <%= form_tag shops_path, class: "navbar-form navbar-left", role: "search", method: :get do %>
             <div class = 'search-bar'>

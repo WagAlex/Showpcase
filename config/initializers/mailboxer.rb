@@ -11,8 +11,8 @@ Mailboxer.setup do |config|
   config.name_method = :name
 
   #Change the way in which emails are delivered by specifying a custom implementation of notification and message mailers
-  config.notification_mailer = CustomNotificationMailer
-  config.message_mailer = CustomMessageMailer
+  #config.notification_mailer = CustomNotificationMailer
+  #config.message_mailer = CustomMessageMailer
 
   #Configures if you use or not a search engine and wich one are you using
   #Supported enignes: [:solr,:sphinx]
