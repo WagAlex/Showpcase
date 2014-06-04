@@ -60,10 +60,12 @@
 
         </ul>
           <%= form_tag shops_path, class: "navbar-form navbar-left", role: "search", method: :get do %>
-            <div class = 'search-bar'>
+            <span class = 'search-bar'>
+
               <%= text_field_tag :search, params[:search], :placeholder => 'Search by location' %>
-              <%= submit_tag 'Search', :name => nil %>
-            </div>
+
+                <%= submit_tag 'Search', :name => nil %>
+            </span>
           <% end %>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->

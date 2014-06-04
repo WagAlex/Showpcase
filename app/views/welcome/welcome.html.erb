@@ -15,13 +15,13 @@
       <h1>Set up Shop</h1><br>
 
         <%= form_tag shops_path, method: :get do %>
-          <div class = 'search-bar'>
+          <span class = 'search-bar'>
             <%= text_field_tag :search, params[:search], :placeholder => 'e.g. Paris, Lyon, Lille...' %>
             <%= submit_tag 'Search', :name => nil %>
-          </div>
-        <% end %>
+          </span>
+        <% end %><br>
 
-      <h6>Find and rent pop-up retail spaces in your city.</h6>
+      <h5>Find and rent pop-up retail spaces in your city.</h5>
       <!-- link_to "Browse our shops", shops_path, class: "btn btn-success btn-lg col-xs-offset-6", id: "call-to-action" -->
     </div>
     <div class="item active">
