@@ -10,7 +10,10 @@ Rails.application.routes.draw do
 
   get 'shops/user_index'
 
-  resources :shops
+  resources :shops do
+    resources :comments
+  end
+
 
 
   resources :bookings
